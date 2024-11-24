@@ -1,0 +1,41 @@
+#selection-box {
+    border: 2px dashed #000;
+    position: absolute;
+    display: none; 
+  }
+
+  toggle {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .toggle-label {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    background-color: #ccc;
+    border-radius: 34px;
+    cursor: pointer;
+  }
+  
+  .toggle-label:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+  }
+  
+  .toggle:checked + .toggle-label {
+    background-color: #2196F3;
+  }
+  
+  .toggle:checked + .toggle-label:before {
+    transform: translateX(26px);
+  }
